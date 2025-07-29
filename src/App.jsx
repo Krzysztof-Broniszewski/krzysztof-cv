@@ -17,7 +17,7 @@ function App() {
           <section>
             <h2 className="text-xl font-bold border-b pb-2 mb-2">Dane kontaktowe</h2>
             <p><strong>Email:</strong> k.broniszewski@gmail.com</p>
-            <p><strong>Telefon:</strong> 510 882 733</p>
+            <p><strong>Telefon:</strong> 510 852 282</p>
             <p><strong>LinkedIn:</strong> <a className="text-blue-400" href="https://linkedin.com/in/krzysztof-b-602a45181" target="_blank">linkedin.com/in/krzysztof</a></p>
             <p><strong>GitHub:</strong> <a className="text-blue-400" href="https://github.com/Krzysztof-Broniszewski" target="_blank">github.com/Krzysztof-Broniszewski</a></p>
           </section>
@@ -26,11 +26,11 @@ function App() {
             <h2 className="text-xl font-bold border-b pb-2 mb-2">Umiejętności</h2>
             <ul className="list-disc list-inside text-sm space-y-1">
               <li>Python, JavaScript, SQL, Bash</li>
-              <li>scikit-learn, PyTorch, TensorFlow, XGBoost, CNN, NLP</li>
+              <li>Scikit-learn, PyTorch, TensorFlow, XGBoost, CNN, NLP</li>
               <li>HTML, CSS, React</li>
               <li>Pandas, NumPy, Jupyter, BigQuery, Spark, Excel</li>
-              <li>Seaborn, matplotlib, Plotly, Dash</li>
-              <li>Darktable, DaVinci Resolve, LUT, gamma</li>
+              <li>Seaborn, Matplotlib, Plotly, Dash</li>
+              <li>Darktable, DaVinci Resolve, LUT, Gamma</li>
               <li>Git, GitHub, VSCode, Anaconda, Linux, JIRA</li>
               <li>Adobe Acrobat, CorelDRAW, Illustrator, Signa Station</li>
             </ul>
@@ -38,7 +38,7 @@ function App() {
 
           <section>
             <h2 className="text-xl font-bold border-b pb-2 mb-2">Zainteresowania</h2>
-            <p>ML/AI, FPV drony, grading, ComfyUI</p>
+            <p>ML/AI, Drones FPV/Cinematic, grading, ComfyUI</p>
           </section>
 
           <section>
@@ -76,6 +76,7 @@ function App() {
             <p className="italic">Koordynator Produkcji ISM</p>
             <ul className="list-disc list-inside ml-4 space-y-1">
               <li>Automatyzacja raportów i optymalizacja procesów produkcyjnych</li>
+              <li>Kalkulacje</li>
               <li>Weryfikacja i poprawa plików graficznych</li>
               <li>Współpraca z planowaniem i produkcją</li>
             </ul>
