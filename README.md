@@ -1,12 +1,47 @@
-# React + Vite
+# Krzysztof Broniszewski — CV / Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)](https://krzysztof-broniszewski.github.io/krzysztof-cv/)
+[![Build](https://img.shields.io/github/actions/workflow/status/Krzysztof-Broniszewski/krzysztof-cv/deploy.yml?label=Pages%20deploy)](../../actions)
+![Stack](https://img.shields.io/badge/React-18-61dafb?logo=react&logoColor=000)
+![Vite](https://img.shields.io/badge/Vite-5-646cff?logo=vite&logoColor=fff)
+![License](https://img.shields.io/badge/License-MIT-2ea44f)
 
-Currently, two official plugins are available:
+Nowoczesne, lekkie CV w React + Vite. Automatycznie **budowane i publikowane** z GitHub Actions na GitHub Pages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 **Live**: https://krzysztof-broniszewski.github.io/krzysztof-cv/
 
-## Expanding the ESLint configuration
+> _Tip:_ jeśli patrzysz na kod – zasugerowane miejsca do edycji: `src/components/`, `src/sections/`, `src/data/` (skills, projekty).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Funkcje
+- Szybkie ładowanie (Vite + code-splitting)
+- Dark-friendly UI (Tailwind/SCSS – zależnie od projektu)
+- Sekcje: o mnie, umiejętności, projekty, doświadczenie, kontakt
+- Responsywność + klawiatura (skip links)
+- Automatyczny **deploy z Actions** na Pages (każdy `push` → publikacja)
+
+---
+
+## 🧰 Technologia
+- **React 18** + **Vite 5**
+- (opcjonalnie) Tailwind CSS / SCSS
+- GitHub Actions → GitHub Pages
+
+---
+
+## 🚀 Szybki start (lokalnie)
+
+```bash
+# wymagany Node 18/20/22
+npm i
+npm run dev
+# dev serwer: http://localhost:5173/
+
+<title>Krzysztof Broniszewski • Data Scientist / ML Engineer</title>
+<meta name="description" content="CV i portfolio — projekty ML/DS, doświadczenie, kontakt." />
+<meta property="og:title" content="Krzysztof Broniszewski — CV / Portfolio" />
+<meta property="og:description" content="Projekty ML/DS, doświadczenie, kontakt." />
+<meta property="og:image" content="https://krzysztof-broniszewski.github.io/krzysztof-cv/og-image.png" />
+<meta property="og:type" content="website" />
+
