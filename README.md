@@ -30,6 +30,15 @@ Nowoczesne, lekkie CV w React + Vite. Automatycznie **budowane i publikowane** z
 
 ---
 
+<title>Krzysztof Broniszewski • Data Scientist / ML Engineer</title>
+<meta name="description" content="CV i portfolio — projekty ML/DS, doświadczenie, kontakt." />
+<meta property="og:title" content="Krzysztof Broniszewski — CV / Portfolio" />
+<meta property="og:description" content="Projekty ML/DS, doświadczenie, kontakt." />
+<meta property="og:image" content="https://krzysztof-broniszewski.github.io/krzysztof-cv/og-image.png" />
+<meta property="og:type" content="website" />
+
+---
+
 ## 🚀 Szybki start (lokalnie)
 
 ```bash
@@ -38,10 +47,4 @@ npm i
 npm run dev
 # dev serwer: http://localhost:5173/
 
-<title>Krzysztof Broniszewski • Data Scientist / ML Engineer</title>
-<meta name="description" content="CV i portfolio — projekty ML/DS, doświadczenie, kontakt." />
-<meta property="og:title" content="Krzysztof Broniszewski — CV / Portfolio" />
-<meta property="og:description" content="Projekty ML/DS, doświadczenie, kontakt." />
-<meta property="og:image" content="https://krzysztof-broniszewski.github.io/krzysztof-cv/og-image.png" />
-<meta property="og:type" content="website" />
 
