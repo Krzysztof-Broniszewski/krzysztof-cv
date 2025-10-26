@@ -73,13 +73,27 @@ function App() {
             <p>{language === "pl" ? "Angielski: B2+/C1" : "English: B2+/C1"}</p>
           </section>
 
-          <a
-            href="/Cv%20Krzysztof%20Ds%20(1).pdf"
-            download
-            className="block mt-6 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center"
-          >
-            {language === "pl" ? "Pobierz CV (PDF)" : "Download CV (PDF)"}
-          </a>
+          {/* Linki do CV */}
+          <div className="mt-6 space-y-3">
+            <a
+              href={`${import.meta.env.BASE_URL}CV_Krzysztof_Broniszewski_PL.pdf`}
+              download
+              rel="noopener"
+              className="block bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center"
+            >
+              {language === "pl" ? "Pobierz CV (PL)" : "Download CV (PL)"}
+            </a>
+
+            <a
+              href={`${import.meta.env.BASE_URL}CV_Krzysztof_Broniszewski_EN.pdf`}
+              download
+              rel="noopener"
+              className="block bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded text-center"
+            >
+              {language === "pl" ? "Pobierz CV (EN)" : "Download CV (EN)"}
+            </a>
+          </div>
+
         </aside>
 
         {/* Prawa kolumna */}
