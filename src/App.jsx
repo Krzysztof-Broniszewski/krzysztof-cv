@@ -15,6 +15,28 @@ export default function App(){
  const [lang,setLang] = useState('pl');
  const [selected,setSelected] = useState('all');
  const [activeDoc,setActiveDoc] = useState(null);
+ // Only in embedded mode: report real document height to the parent portfolio.
+ useEffect(() => {
+  if (!embed || window.parent === window) return;
+  const parentOrigin = 'https://krzysztof-broniszewski.github.io';
+  let raf = 0;
+  const sendHeight = () => {
+   cancelAnimationFrame(raf);
+   raf = requestAnimationFrame(() => {
+    const root = document.querySelector('.cv-site');
+    if (!root) return;
+    const height = Math.ceil(Math.max(root.getBoundingClientRect().height, root.scrollHeight));
+    if (height > 0) window.parent.postMessage({type:'KRZYSZTOF_CV_HEIGHT',height}, parentOrigin);
+   });
+  };
+  const observer = new ResizeObserver(sendHeight);
+  observer.observe(document.querySelector('.cv-site'));
+  window.addEventListener('resize', sendHeight);
+  window.addEventListener('load', sendHeight);
+  document.fonts?.ready.then(sendHeight);
+  sendHeight();
+  return () => {observer.disconnect();cancelAnimationFrame(raf);window.removeEventListener('resize',sendHeight);window.removeEventListener('load',sendHeight)};
+ }, []);
  useEffect(()=>{if(activeDoc===null)return;const onKey=e=>{if(e.key==='Escape')setActiveDoc(null);if(e.key==='ArrowRight')setActiveDoc(i=>(i+1)%courseDocs.length);if(e.key==='ArrowLeft')setActiveDoc(i=>(i+courseDocs.length-1)%courseDocs.length)};window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey)},[activeDoc]);
  const t=labels[lang], v=data.variants[selected], exp=data.experience[lang];
  const pdf=`${import.meta.env.BASE_URL}CV_Krzysztof_Broniszewski_${selected.toUpperCase()}_${lang.toUpperCase()}.pdf`;
