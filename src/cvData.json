@@ -1,0 +1,280 @@
+{
+  "urls": {
+    "cv": "https://krzysztof-broniszewski.github.io/krzysztof-cv/",
+    "linkedin": "https://www.linkedin.com/in/krzysztof-b-602a45181/",
+    "github": "https://github.com/Krzysztof-Broniszewski",
+    "portfolio": "https://krzysztof-broniszewski.github.io/drone-ai-gallery/",
+    "youtube": "https://www.youtube.com/channel/UCCAHD3K9D9tyEpvwcsluTtA"
+  },
+  "projects": [
+    {
+      "id": "rag",
+      "title": "RAV4 RAG Assistant",
+      "url": "https://github.com/Krzysztof-Broniszewski/rav4-rag-assistant",
+      "pl": "Asystent do instrukcji Toyoty RAV4: PDF, chunking, embeddings E5, FAISS, reranking BGE, Bielik 11B, Ollama i FastAPI.",
+      "en": "Toyota RAV4 manual assistant: PDF parsing, chunking, E5 embeddings, FAISS, BGE reranking, Bielik 11B, Ollama and FastAPI."
+    },
+    {
+      "id": "emotion",
+      "title": "Face Emotion Recognition",
+      "url": "https://github.com/Krzysztof-Broniszewski/face-emotion-detection-best-ResNet18",
+      "pl": "Rozpoznawanie emocji twarzy: ResNet18, transfer learning, trening i ewaluacja w PyTorch oraz OpenCV.",
+      "en": "Facial emotion recognition with ResNet18, transfer learning, training and evaluation using PyTorch and OpenCV."
+    },
+    {
+      "id": "drone",
+      "title": "Drone Image Quality Assessment",
+      "url": "https://github.com/Krzysztof-Broniszewski/drone-quality-assessment/tree/main",
+      "pl": "Ocena jakości zdjęć z drona i selekcja materiału fotograficznego z wykorzystaniem deep learningu.",
+      "en": "Drone photo quality assessment and image selection using deep learning."
+    },
+    {
+      "id": "accidents",
+      "title": "Wypadki drogowe w Polsce 2004–2023",
+      "titleEn": "Road Accidents in Poland 2004–2023",
+      "url": "https://github.com/Krzysztof-Broniszewski/plotly-dash",
+      "pl": "Analiza danych KGP, przygotowanie danych, trendy i interaktywny dashboard w Python, Pandas, Plotly i Dash.",
+      "en": "Police accident data analysis, data preparation, trends and an interactive Python, Pandas, Plotly and Dash dashboard."
+    },
+    {
+      "id": "housing",
+      "title": "California Housing",
+      "url": "https://github.com/Krzysztof-Broniszewski/california-housing-ml",
+      "pl": "Analiza danych o mieszkaniach, regresja, przygotowanie cech, porównanie modeli i ewaluacja w scikit-learn.",
+      "en": "Housing data analysis, regression, feature engineering, model comparison and evaluation with scikit-learn."
+    },
+    {
+      "id": "luxury",
+      "title": "BLACK LUXURY — BORN FROM FIRE",
+      "url": "https://krzysztof-broniszewski.github.io/drone-ai-gallery/projects/volcanic-perfume/",
+      "pl": "Autorska reklama AI: koncepcja, generowanie i retusz obrazów, animacja, muzyka, efekty i montaż w ComfyUI oraz DaVinci Resolve.",
+      "en": "Original AI commercial: concept, image generation and retouching, animation, music, sound design and editing in ComfyUI and DaVinci Resolve."
+    }
+  ],
+  "skills": {
+    "business": {
+      "pl": [
+        "Kalkulacje produkcyjne, analiza kosztów i kosztorysowanie",
+        "Pozyskiwanie i porównywanie ofert dostawców oraz podwykonawców",
+        "Zakupy, cenniki, planowanie i koordynacja produkcji",
+        "Dokumentacja, kontrola jakości, logistyka operacyjna"
+      ],
+      "en": [
+        "Production costing, cost analysis and estimates",
+        "Supplier and subcontractor sourcing and quotation comparison",
+        "Purchasing, price lists, production planning and coordination",
+        "Documentation, quality control and operational logistics"
+      ]
+    },
+    "data": {
+      "pl": [
+        "Excel: formuły, tabele przestawne, formatowanie warunkowe",
+        "Power BI, Power Query, DAX, raportowanie i dashboardy",
+        "Python, SQL, Pandas, NumPy, Matplotlib, Plotly, Dash",
+        "Czyszczenie danych, wizualizacja, analiza trendów, scikit-learn"
+      ],
+      "en": [
+        "Excel: formulas, pivot tables and conditional formatting",
+        "Power BI, Power Query, DAX, reporting and dashboards",
+        "Python, SQL, Pandas, NumPy, Matplotlib, Plotly, Dash",
+        "Data cleaning, visualization, trend analysis and scikit-learn"
+      ]
+    },
+    "ai": {
+      "pl": [
+        "Python, PyTorch, TensorFlow/Keras, scikit-learn, XGBoost",
+        "Machine Learning: regresja, klasyfikacja, CNN, transfer learning, ewaluacja",
+        "Computer Vision: OpenCV, YOLO, MediaPipe, analiza obrazu",
+        "LLM / RAG: chunking, embeddings, FAISS, retrieval, reranking, Bielik, Ollama"
+      ],
+      "en": [
+        "Python, PyTorch, TensorFlow/Keras, scikit-learn, XGBoost",
+        "Machine Learning: regression, classification, CNN, transfer learning, evaluation",
+        "Computer Vision: OpenCV, YOLO, MediaPipe, image analysis",
+        "LLM / RAG: chunking, embeddings, FAISS, retrieval, reranking, Bielik, Ollama"
+      ]
+    },
+    "creative": {
+      "pl": [
+        "ComfyUI, FLUX, Stable Diffusion / SDXL, ControlNet, LoRA, IP-Adapter",
+        "Inpainting, upscaling, Qwen Image, generowanie wideo i dźwięku",
+        "Adobe, CorelDRAW, DaVinci Resolve, DTP, prepress",
+        "Fotografia i filmowanie z drona DJI Mini 4 Pro"
+      ],
+      "en": [
+        "ComfyUI, FLUX, Stable Diffusion / SDXL, ControlNet, LoRA, IP-Adapter",
+        "Inpainting, upscaling, Qwen Image, video and audio generation",
+        "Adobe, CorelDRAW, DaVinci Resolve, DTP and prepress",
+        "DJI Mini 4 Pro aerial photography and video"
+      ]
+    },
+    "software": {
+      "pl": [
+        "Git, GitHub, Docker, React, Flask, FastAPI, PostgreSQL"
+      ],
+      "en": [
+        "Git, GitHub, Docker, React, Flask, FastAPI, PostgreSQL"
+      ]
+    }
+  },
+  "variants": {
+    "all": {
+      "pl": "Pełne CV",
+      "en": "Full CV",
+      "titlePl": "Profil zawodowy · AI · Analityka · Produkcja",
+      "titleEn": "Professional Profile · AI · Analytics · Production",
+      "profilePl": "Specjalista z wieloletnim doświadczeniem w poligrafii, DTP, kalkulacjach, zakupach i koordynacji produkcji. Tworzę projekty w Pythonie z zakresu analizy danych, Machine Learning, Computer Vision i RAG/LLM; pracuję z Excelem, Power BI i narzędziami generatywnej AI. Łączę kompetencje techniczne z praktycznym doświadczeniem operacyjnym.",
+      "profileEn": "Professional with extensive experience in print production, DTP, costing, purchasing and production coordination. I develop Python projects in data analytics, Machine Learning, Computer Vision and RAG/LLM, and work with Excel, Power BI and generative AI tools. I combine technical skills with hands-on operational experience.",
+      "skillGroups": [
+        "business",
+        "data",
+        "ai",
+        "creative",
+        "software"
+      ],
+      "order": [
+        "rag",
+        "emotion",
+        "drone",
+        "accidents",
+        "housing",
+        "luxury"
+      ]
+    },
+    "ai": {
+      "pl": "AI / ML Engineer",
+      "en": "AI / ML Engineer",
+      "titlePl": "AI / Machine Learning Engineer",
+      "titleEn": "AI / Machine Learning Engineer",
+      "profilePl": "Realizuję projekty Machine Learning, Computer Vision i RAG/LLM w Pythonie, wykorzystując PyTorch, scikit-learn, OpenCV, FAISS i FastAPI. Pracuję nad pełnym procesem od przygotowania danych przez modelowanie po ewaluację i aplikację. Wykorzystuję też generatywną AI oraz doświadczenie w optymalizacji procesów.",
+      "profileEn": "I build Python-based Machine Learning, Computer Vision and RAG/LLM projects using PyTorch, scikit-learn, OpenCV, FAISS and FastAPI. My work covers data preparation, modelling, evaluation and applications, supported by generative AI skills and process improvement experience.",
+      "skillGroups": [
+        "ai",
+        "software",
+        "data",
+        "creative",
+        "business"
+      ],
+      "order": [
+        "rag",
+        "emotion",
+        "drone",
+        "housing",
+        "accidents",
+        "luxury"
+      ]
+    },
+    "data": {
+      "pl": "Data Science / Analytics",
+      "en": "Data Science / Analytics",
+      "titlePl": "Data Scientist / Data Analyst",
+      "titleEn": "Data Scientist / Data Analyst",
+      "profilePl": "Analizuję dane i przygotowuję raporty oraz dashboardy w Pythonie, Excelu i Power BI. Korzystam z SQL, Pandas, Plotly, Dash i metod uczenia maszynowego. Mam praktyczne doświadczenie w analizie kosztów, monitorowaniu zamówień i raportowaniu procesów produkcyjnych.",
+      "profileEn": "I analyze data and build reports and dashboards using Python, Excel and Power BI. I use SQL, Pandas, Plotly, Dash and machine learning methods, backed by experience in cost analysis, order tracking and production reporting.",
+      "skillGroups": [
+        "data",
+        "business",
+        "ai",
+        "software",
+        "creative"
+      ],
+      "order": [
+        "accidents",
+        "housing",
+        "rag",
+        "drone",
+        "emotion",
+        "luxury"
+      ]
+    },
+    "proc": {
+      "pl": "Zakupy / Kalkulacja",
+      "en": "Purchasing / Costing",
+      "titlePl": "Specjalista ds. Zakupów i Kalkulacji",
+      "titleEn": "Purchasing / Cost Estimation Specialist",
+      "profilePl": "Specjalista z wieloletnim doświadczeniem w kalkulacjach produkcyjnych, analizie kosztów, pozyskiwaniu i porównywaniu ofert dostawców oraz koordynacji zamówień. W Walstead Kraków rozwijałem autorskie narzędzie Excel do monitorowania zleceń. Wspieram decyzje operacyjne analizą danych, raportowaniem i Power BI.",
+      "profileEn": "Specialist with extensive experience in production costing, cost analysis, supplier sourcing and quotation comparison, and order coordination. At Walstead Kraków I developed an Excel tool for tracking orders. I support operational decisions with data analysis, reporting and Power BI.",
+      "skillGroups": [
+        "business",
+        "data",
+        "software",
+        "ai",
+        "creative"
+      ],
+      "order": [
+        "accidents",
+        "housing",
+        "rag",
+        "drone",
+        "emotion",
+        "luxury"
+      ]
+    }
+  },
+  "experience": {
+    "pl": {
+      "walsteadTitle": "Specjalista ds. Kalkulacji i Przygotowania Produkcji ISM",
+      "walstead": [
+        "Kalkulacje produkcyjne w Signa; analiza kosztów materiałów, surowców, usług i realizacji.",
+        "Pozyskiwanie i porównywanie ofert dostawców i podwykonawców pod kątem ceny, jakości i terminu.",
+        "Aktualizacja cenników i dokumentacji kosztowej; zestawienia wspierające decyzje operacyjne.",
+        "Monitorowanie dostaw, terminów i etapów produkcji; współpraca z klientami, dostawcami i zespołami firmy.",
+        "Weryfikacja plików graficznych i przygotowania do druku; autorskie narzędzie Excel do monitorowania zleceń."
+      ],
+      "previousTitle": "DTP · Prepress · Digital Printing · Graphic Design",
+      "previous": [
+        "Projektowanie materiałów graficznych i opakowań, druk cyfrowy i offsetowy, impozycja i kontrola plików.",
+        "Organizacja produkcji, pracy zespołu, magazynu i zaopatrzenia."
+      ],
+      "egraphTitle": "E-GRAPH — własna działalność",
+      "egraph": [
+        "Projektowanie graficzne, wyceny, zakupy, obsługa klientów, przygotowanie do druku i koordynacja zleceń."
+      ]
+    },
+    "en": {
+      "walsteadTitle": "Cost Estimation & Production Preparation Specialist ISM",
+      "walstead": [
+        "Production costing in Signa; cost analysis of materials, supplies, services and manufacturing.",
+        "Sourcing and comparing supplier and subcontractor quotations for price, quality and delivery time.",
+        "Updating price lists and cost documentation; preparing operational analyses.",
+        "Monitoring deliveries, deadlines and production stages; coordinating with clients, suppliers and teams.",
+        "Prepress file verification and an original Excel tool for order tracking."
+      ],
+      "previousTitle": "DTP · Prepress · Digital Printing · Graphic Design",
+      "previous": [
+        "Graphic design and packaging, digital and offset printing, imposition and file verification.",
+        "Production, team, warehouse and purchasing coordination."
+      ],
+      "egraphTitle": "E-GRAPH — self-employment",
+      "egraph": [
+        "Graphic design, estimates, purchasing, customer service, prepress and order coordination."
+      ]
+    }
+  },
+  "education": {
+    "pl": [
+      "CodeBrainers — Data Science + AI Bootcamp | 12.2024–06.2025 | 260 godzin",
+      "Praktyczny Python | 05.2022–07.2022 | 8 tygodni, 8 projektów",
+      "Politechnika Krakowska | Fizyka Techniczna i Modelowanie Komputerowe | 2002–2004 (studia nieukończone)",
+      "Liceum Ogólnokształcące w Muszynie | profil informatyczny | 1996–2000"
+    ],
+    "en": [
+      "CodeBrainers — Data Science + AI Bootcamp | 12.2024–06.2025 | 260 hours",
+      "Practical Python | 05.2022–07.2022 | 8 weeks, 8 projects",
+      "Cracow University of Technology | Technical Physics and Computer Modelling | 2002–2004 (not completed)",
+      "Secondary School in Muszyna | IT profile | 1996–2000"
+    ]
+  },
+  "additional": {
+    "pl": [
+      "Uprawnienia pilota BSP: A1/A3; fotografia i filmowanie DJI Mini 4 Pro.",
+      "Języki: polski — ojczysty; angielski — B1.",
+      "Laureat konkursu „Damy Radę! Otwieramy własny biznes” — biznesplan i dotacja na E-GRAPH."
+    ],
+    "en": [
+      "UAS pilot qualification: A1/A3; DJI Mini 4 Pro aerial photography and video.",
+      "Languages: Polish — native; English — B1.",
+      "Winner of the “Damy Radę! Otwieramy własny biznes” business plan competition; funding for E-GRAPH."
+    ]
+  }
+}

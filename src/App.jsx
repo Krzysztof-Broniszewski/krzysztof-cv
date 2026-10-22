@@ -1,128 +1,46 @@
-import "./index.css";
-import profileImage from "./assets/Base_00032_.png";
-import { useState } from "react";
+import { useEffect, useState } from 'react';
+import profileImage from './assets/Base_00032_.png';
+import data from './cvData.json';
+import './index.css';
 
-function App() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [language, setLanguage] = useState("pl");
-
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-  const toggleLanguage = () => setLanguage(language === "pl" ? "en" : "pl");
-
-  const containerClass = `${darkMode ? "bg-gray-900 text-white" : "bg-slate-100 text-gray-900"}`;
-  const cardClass = `${darkMode ? "bg-gray-800 text-white" : "bg-gray-200 text-gray-900"}`;
-  const sidebarClass = `${darkMode ? "bg-gray-950 text-white" : "bg-slate-800 text-white"}`;
-
-  return (
-    <div className={`min-h-screen ${containerClass} font-sans flex justify-center items-start py-10 px-4`}>
-      <div className="absolute top-6 right-6 flex space-x-4">
-        <button onClick={toggleDarkMode} className="px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white">
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-        <button onClick={toggleLanguage} className="px-4 py-2 rounded bg-green-500 hover:bg-green-600 text-white">
-          {language === "pl" ? "English" : "Polski"}
-        </button>
-      </div>
-
-      <div className={`max-w-6xl mx-auto my-10 shadow-2xl ${cardClass} rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-3`}>
-        <aside className={`${sidebarClass} p-6 space-y-6 md:col-span-1`}>
-          <img src={profileImage} alt="Krzysztof Broniszewski" className="rounded-lg w-full h-auto mb-4 shadow-md" />
-
-          <section>
-            <h2 className="text-xl font-bold border-b pb-2 mb-2">{language === "pl" ? "Dane kontaktowe" : "Contact Info"}</h2>
-            <p><strong>Email:</strong> k.broniszewski@gmail.com</p>
-            <p><strong>{language === "pl" ? "Telefon" : "Phone"}:</strong> +48 510 852 282</p>
-            <p><strong>LinkedIn:</strong> <a className="text-blue-400" href="https://www.linkedin.com/in/krzysztof-b-602a45181/" target="_blank" rel="noreferrer">linkedin.com/in/krzysztof-b-602a45181</a></p>
-            <p><strong>GitHub:</strong> <a className="text-blue-400" href="https://github.com/Krzysztof-Broniszewski" target="_blank" rel="noreferrer">github.com/Krzysztof-Broniszewski</a></p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold border-b pb-2 mb-2">{language === "pl" ? "Umiejętności" : "Skills"}</h2>
-            <ul className="list-disc list-inside text-sm space-y-1">
-              <li>Python, SQL</li>
-              <li>PyTorch, TensorFlow/Keras, scikit-learn, XGBoost</li>
-              <li>Computer Vision, OpenCV, YOLO, MediaPipe, CNN</li>
-              <li>RAG, LLM, NLP, embeddings, FAISS, Ollama, FastAPI</li>
-              <li>ComfyUI, FLUX, Stable Diffusion / SDXL, ControlNet, LoRA</li>
-              <li>Pandas, NumPy, Matplotlib, Plotly, Dash</li>
-              <li>PostgreSQL, BigQuery</li>
-              <li>React, Flask, Git, GitHub, Docker, Jupyter, Google Colab</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold border-b pb-2 mb-2">{language === "pl" ? "Zainteresowania" : "Interests"}</h2>
-            <p>{language === "pl" ? "Drony i fotografia lotnicza, Computer Vision, Generative AI, fotografia i postprodukcja, montaż wideo" : "Drones and aerial photography, Computer Vision, Generative AI, photography and post-production, video editing"}</p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold border-b pb-2 mb-2">{language === "pl" ? "Języki" : "Languages"}</h2>
-            <p>{language === "pl" ? "Polski: ojczysty" : "Polish: native"}</p>
-            <p>{language === "pl" ? "Angielski: B1 (dobra znajomość dokumentacji technicznej)" : "English: B1 (good understanding of technical documentation)"}</p>
-          </section>
-
-          <a href={language === "pl" ? "CV_Krzysztof_Broniszewski_PL.pdf" : "CV_Krzysztof_Broniszewski_EN.pdf"} target="_blank" rel="noopener noreferrer" type="application/pdf" className="block mt-6 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded text-center">
-            {language === "pl" ? "Pobierz CV (PDF)" : "Download CV (PDF)"}
-          </a>
-        </aside>
-
-        <main className="p-6 md:col-span-2 space-y-6">
-          <section>
-            <h1 className="text-4xl font-bold">Krzysztof Broniszewski</h1>
-            <p className="text-lg text-gray-600">AI / Machine Learning / Computer Vision Engineer</p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-2">{language === "pl" ? "Profil zawodowy" : "Professional Profile"}</h2>
-            <p>{language === "pl"
-              ? "Rozwijam rozwiązania z obszaru Machine Learning, Computer Vision i AI, wykorzystując przede wszystkim Python, PyTorch, OpenCV oraz scikit-learn. Realizuję projekty obejmujące cały proces - od przygotowania i analizy danych, przez trenowanie oraz ocenę modeli, po tworzenie aplikacji prezentujących ich działanie. Szczególnie interesuje mnie Computer Vision, Generative AI oraz systemy RAG/LLM i praktyczne zastosowanie AI. Łączę kompetencje techniczne z wieloletnim doświadczeniem w grafice, digital publishing i optymalizacji procesów produkcyjnych."
-              : "I develop Machine Learning, Computer Vision and AI solutions using primarily Python, PyTorch, OpenCV and scikit-learn. My projects cover the full process - from data preparation and analysis, through model training and evaluation, to applications demonstrating their capabilities. I am particularly interested in Computer Vision, Generative AI, RAG/LLM systems and practical AI applications. I combine technical skills with many years of experience in graphics, digital publishing and production workflow optimization."}</p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-2">{language === "pl" ? "Doświadczenie zawodowe" : "Work Experience"}</h2>
-            <p className="font-bold">Walstead Kraków Sp. z o.o. | Kraków</p>
-            <p className="italic">{language === "pl" ? "Specjalista ds. Kalkulacji i Przygotowania Produkcji ISM | 02.2023-11.2026" : "Calculation and Production Preparation Specialist ISM | 02.2023-11.2026"}</p>
-            <ul className="list-disc list-inside ml-4 space-y-1">
-              <li>{language === "pl" ? "Kalkulacje produkcyjne, analiza kosztów, materiałów oraz ofert dostawców i podwykonawców" : "Production calculations and analysis of costs, materials, supplier and subcontractor offers"}</li>
-              <li>{language === "pl" ? "Stworzenie i rozwijanie narzędzia Excel do monitorowania zleceń, etapów produkcji i terminów" : "Created and developed an Excel tool for monitoring orders, production stages and deadlines"}</li>
-              <li>{language === "pl" ? "Koordynacja procesów produkcyjnych i współpraca z klientami, dostawcami oraz zespołami wewnętrznymi" : "Production process coordination and cooperation with clients, suppliers and internal teams"}</li>
-              <li>{language === "pl" ? "Techniczna weryfikacja plików oraz usprawnianie i automatyzacja procesów pracy" : "Technical file verification, workflow improvement and automation"}</li>
-            </ul>
-
-            <p className="font-bold mt-4">{language === "pl" ? "Wcześniejsze doświadczenie zawodowe | 2005-2023" : "Previous professional experience | 2005-2023"}</p>
-            <p className="italic">DTP / Prepress / Digital Printing / Graphic Design</p>
-            <ul className="list-disc list-inside ml-4 space-y-1">
-              <li>{language === "pl" ? "Wieloletnie doświadczenie w DTP, prepress oraz produkcji cyfrowej i offsetowej" : "Extensive experience in DTP, prepress, digital and offset production"}</li>
-              <li>{language === "pl" ? "Projektowanie materiałów graficznych i przygotowanie do różnych technologii produkcyjnych" : "Graphic design and preparation for various production technologies"}</li>
-              <li>{language === "pl" ? "Zarządzanie produkcją, zespołem, magazynem i własną działalnością E-GRAPH" : "Production, team and warehouse management, including own E-GRAPH business"}</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-2">{language === "pl" ? "Projekty" : "Projects"}</h2>
-            <ul className="space-y-3">
-              <li><strong>RAV4 RAG Assistant - Generative AI / RAG / LLM</strong><br />{language === "pl" ? "Asystent RAG odpowiadający na pytania techniczne na podstawie dokumentacji Toyoty RAV4. Pipeline: PDF, chunking, E5 embeddings, FAISS, BGE reranking, Bielik 11B, Ollama, FastAPI i Web UI." : "RAG assistant answering technical questions based on Toyota RAV4 documentation. Pipeline: PDF, chunking, E5 embeddings, FAISS, BGE reranking, Bielik 11B, Ollama, FastAPI and Web UI."} <a className="text-blue-500" href="https://github.com/Krzysztof-Broniszewski/rav4-rag-assistant" target="_blank" rel="noreferrer">GitHub</a></li>
-              <li><strong>Face Emotion Recognition - Deep Learning / Computer Vision</strong><br />{language === "pl" ? "Rozpoznawanie emocji twarzy z wykorzystaniem ResNet18, transfer learningu, PyTorch i OpenCV." : "Facial emotion recognition using ResNet18, transfer learning, PyTorch and OpenCV."} <a className="text-blue-500" href="https://github.com/Krzysztof-Broniszewski/face-emotion-detection-best-ResNet18" target="_blank" rel="noreferrer">GitHub</a></li>
-              <li><strong>Drone Image Quality Assessment - Deep Learning</strong><br />{language === "pl" ? "Automatyczna ocena jakości zdjęć wykonanych dronem z wykorzystaniem Deep Learning i Computer Vision." : "Automatic quality assessment of drone imagery using Deep Learning and Computer Vision."} <a className="text-blue-500" href="https://github.com/Krzysztof-Broniszewski/drone-quality-assessment/tree/main" target="_blank" rel="noreferrer">GitHub</a></li>
-              <li><strong>{language === "pl" ? "Analiza wypadków drogowych w Polsce 2004-2023" : "Polish Road Accident Analysis 2004-2023"}</strong><br />{language === "pl" ? "Interaktywny dashboard: Python, Pandas, Plotly i Dash." : "Interactive dashboard built with Python, Pandas, Plotly and Dash."} <a className="text-blue-500" href="https://github.com/Krzysztof-Broniszewski/plotly-dash" target="_blank" rel="noreferrer">GitHub</a></li>
-              <li><strong>California Housing - Machine Learning</strong><br />{language === "pl" ? "Projekt regresyjny: przygotowanie danych, analiza cech, trening, porównanie i ewaluacja modeli." : "Regression project covering data preparation, feature analysis, model training, comparison and evaluation."} <a className="text-blue-500" href="https://github.com/Krzysztof-Broniszewski/california-housing-ml" target="_blank" rel="noreferrer">GitHub</a></li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-2">{language === "pl" ? "Edukacja i kursy" : "Education & Courses"}</h2>
-            <ul className="list-disc list-inside ml-4">
-              <li>CodeBrainers - Data Science + AI Bootcamp | 12.2024-06.2025 | 260 {language === "pl" ? "godzin lekcyjnych" : "lesson hours"}</li>
-              <li>{language === "pl" ? "Praktyczny Python | 05.2022-07.2022 | 8 tygodni | 8 projektów" : "Practical Python | 05.2022-07.2022 | 8 weeks | 8 projects"}</li>
-              <li>{language === "pl" ? "Politechnika Krakowska - Wydział Fizyki Technicznej i Modelowania Komputerowego | studia nieukończone | 2002-2004" : "Cracow University of Technology - Faculty of Technical Physics and Computer Modelling | unfinished studies | 2002-2004"}</li>
-              <li>{language === "pl" ? "Liceum Ogólnokształcące w Muszynie - profil informatyczny | 1996-2000" : "High School in Muszyna - IT profile | 1996-2000"}</li>
-            </ul>
-          </section>
-        </main>
-      </div>
-    </div>
-  );
+const labels = {
+ pl: {eyebrow:'PROFIL / DOŚWIADCZENIE', heading:'CV & RESUME', subtitle:'Doświadczenie, projekty i kompetencje zawodowe.',themeLight:'Light Mode',themeDark:'Dark Mode',lang:'English',choose:'WYBIERZ PROFIL',contact:'KONTAKT I LINKI',skills:'UMIEJĘTNOŚCI',experience:'DOŚWIADCZENIE ZAWODOWE',profile:'PROFIL ZAWODOWY',projects:'PROJEKTY',education:'WYKSZTAŁCENIE I KURSY',additional:'INFORMACJE DODATKOWE',download:'Pobierz PDF',period:'02.2023–11.2026',all:'Pełny profil',back:'2005–2023',pdfNote:'Wersja PDF dopasowana do wybranego profilu',certificate:'CERTYFIKAT I ZAKRES SZKOLENIA',certificateHint:'Kliknij miniaturę, aby otworzyć dokument',close:'Zamknij podgląd',docs:['Certyfikat ukończenia kursu','Zakres szkolenia — strona 1','Zakres szkolenia — strona 2'], groups:{business:'BIZNES I OPERACJE',data:'ANALIZA DANYCH',ai:'AI / MACHINE LEARNING',creative:'GENERATIVE AI / GRAFIKA / DRONY',software:'SOFTWARE / NARZĘDZIA'}},
+ en: {eyebrow:'PROFILE / EXPERIENCE', heading:'CV & RESUME', subtitle:'Professional experience, projects and technical skills.',themeLight:'Light Mode',themeDark:'Dark Mode',lang:'Polski',choose:'CHOOSE A PROFILE',contact:'CONTACT & LINKS',skills:'SKILLS',experience:'WORK EXPERIENCE',profile:'PROFESSIONAL PROFILE',projects:'PROJECTS',education:'EDUCATION & COURSES',additional:'ADDITIONAL INFORMATION',download:'Download PDF',period:'02.2023–11.2026',all:'Full profile',back:'2005–2023',pdfNote:'PDF tailored to the selected profile',certificate:'CERTIFICATE & COURSE SYLLABUS',certificateHint:'Select a thumbnail to view the document',close:'Close preview',docs:['Course completion certificate','Course syllabus — page 1','Course syllabus — page 2'],groups:{business:'BUSINESS & OPERATIONS',data:'DATA ANALYTICS',ai:'AI / MACHINE LEARNING',creative:'GENERATIVE AI / DESIGN / DRONES',software:'SOFTWARE / TOOLS'}}
+};
+const embed = new URLSearchParams(window.location.search).get('embed') === '1';
+const courseDocs = ['Certyfikat.jpg', 'Zakres_p1.jpg', 'Zakres_p2.jpg'];
+const projectById = Object.fromEntries(data.projects.map(p=>[p.id,p]));
+export default function App(){
+ const [dark,setDark] = useState(true);
+ const [lang,setLang] = useState('pl');
+ const [selected,setSelected] = useState('all');
+ const [activeDoc,setActiveDoc] = useState(null);
+ useEffect(()=>{if(activeDoc===null)return;const onKey=e=>{if(e.key==='Escape')setActiveDoc(null);if(e.key==='ArrowRight')setActiveDoc(i=>(i+1)%courseDocs.length);if(e.key==='ArrowLeft')setActiveDoc(i=>(i+courseDocs.length-1)%courseDocs.length)};window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey)},[activeDoc]);
+ const t=labels[lang], v=data.variants[selected], exp=data.experience[lang];
+ const pdf=`${import.meta.env.BASE_URL}CV_Krzysztof_Broniszewski_${selected.toUpperCase()}_${lang.toUpperCase()}.pdf`;
+ return <div className={`cv-site ${dark?'dark':'light'} ${embed?'embedded':''}`}>
+  <div className="site-wrap">
+   {!embed && <header className="hero"><div className="eyebrow">{t.eyebrow}</div><h1>{t.heading}</h1><p>{t.subtitle}</p><div className="hero-line"/></header>}
+   <div className="toolbar"><div className="toolbar-title">{t.choose}</div><div className="actions"><button type="button" onClick={()=>setDark(!dark)} aria-label="Toggle color theme">{dark?'☼':'☾'} {dark?t.themeLight:t.themeDark}</button><button type="button" onClick={()=>setLang(lang==='pl'?'en':'pl')}>◎ {t.lang}</button></div></div>
+   <nav className="tracks" aria-label={t.choose}>{Object.entries(data.variants).map(([id,item])=><button type="button" key={id} aria-current={selected===id?'page':undefined} className={selected===id?'active':''} onClick={()=>setSelected(id)}>{item[lang]}</button>)}</nav>
+   <div className="resume">
+    <aside className="sidebar"><img src={profileImage} alt="Krzysztof Broniszewski" className="portrait"/><h2>{t.contact}</h2>
+     <a href="mailto:k.broniszewski@gmail.com">k.broniszewski@gmail.com</a><a href="tel:+48510852282">+48 510 852 282</a>
+     {['portfolio','github','linkedin','youtube'].map(id=><a key={id} target="_blank" rel="noreferrer" href={data.urls[id]}>{id==='github'?'GitHub':id==='linkedin'?'LinkedIn':id==='youtube'?'YouTube · King of Drone':'Portfolio'} ↗</a>)}
+     <h2>{t.skills}</h2>{v.skillGroups.map(id=><div className="skill-group" key={id}><h4>{t.groups[id]}</h4><ul>{data.skills[id][lang].map(x=><li key={x}>{x}</li>)}</ul></div>)}
+     <h2>{t.additional}</h2><ul>{data.additional[lang].map(x=><li key={x}>{x}</li>)}</ul>
+     <a className="download" href={pdf} download>{t.download} · {v[lang]} ↗</a><p className="download-note">{t.pdfNote}</p>
+    </aside>
+    <main className="content"><div className="identity"><div className="small-label">KRZYSZTOF BRONISZEWSKI</div><h2>{v[lang==='pl'?'titlePl':'titleEn']}</h2><span className="location">KRAKÓW · POLAND</span></div>
+     <section><h3>{t.profile}</h3><p>{v[lang==='pl'?'profilePl':'profileEn']}</p></section>
+     <section><h3>{t.experience}</h3><div className="entry"><div className="entry-meta">{t.period}</div><h4>Walstead Kraków Sp. z o.o.</h4><em>{exp.walsteadTitle}</em><ul>{exp.walstead.map(x=><li key={x}>{x}</li>)}</ul></div><div className="entry"><div className="entry-meta">{t.back}</div><h4>{exp.previousTitle}</h4><ul>{exp.previous.map(x=><li key={x}>{x}</li>)}</ul></div><div className="entry"><h4>{exp.egraphTitle}</h4><ul>{exp.egraph.map(x=><li key={x}>{x}</li>)}</ul></div></section>
+     <section><h3>{t.projects}</h3><div className="project-list">{v.order.map((id,i)=>{const p=projectById[id];return <div className="project" key={id}><span className="project-number">{String(i+1).padStart(2,'0')}</span><div><a className="project-title" href={p.url} target="_blank" rel="noreferrer">{lang==='en'&&p.titleEn?p.titleEn:p.title} ↗</a><p>{p[lang]}</p></div></div>})}</div></section>
+     <section><h3>{t.education}</h3><ul>{data.education[lang].map(x=><li key={x}>{x}</li>)}</ul>
+      <div className="certificate-section"><h4>{t.certificate}</h4><p className="certificate-hint">{t.certificateHint}</p>
+       <div className="certificate-grid">{courseDocs.map((filename,i)=><button type="button" className="certificate-card" key={filename} onClick={()=>setActiveDoc(i)} aria-label={t.docs[i]}><span className="certificate-image"><img src={`${import.meta.env.BASE_URL}${filename}`} alt={t.docs[i]} loading="lazy"/></span><span className="certificate-caption">{t.docs[i]}</span></button>)}</div>
+      </div></section>
+    </main>
+   </div>{activeDoc!==null && <div className="document-lightbox" role="dialog" aria-modal="true" aria-label={t.docs[activeDoc]} onClick={()=>setActiveDoc(null)}><div className="document-viewer" onClick={e=>e.stopPropagation()}><div className="document-viewer-bar"><span>{t.docs[activeDoc]} · {activeDoc+1}/{courseDocs.length}</span><button type="button" onClick={()=>setActiveDoc(null)} aria-label={t.close}>✕ {t.close}</button></div><img src={`${import.meta.env.BASE_URL}${courseDocs[activeDoc]}`} alt={t.docs[activeDoc]}/><div className="document-viewer-nav"><button type="button" onClick={()=>setActiveDoc(i=>(i+courseDocs.length-1)%courseDocs.length)} aria-label="Previous document">←</button><button type="button" onClick={()=>setActiveDoc(i=>(i+1)%courseDocs.length)} aria-label="Next document">→</button></div></div></div>}{!embed && <footer>© 2026 KRZYSZTOF BRONISZEWSKI <span>CV · PORTFOLIO · EXPERIENCE</span></footer>}
+  </div>
+ </div>;
 }
-
-export default App;
