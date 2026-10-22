@@ -15,6 +15,22 @@ export default function App(){
  const [lang,setLang] = useState('pl');
  const [selected,setSelected] = useState('all');
  const [activeDoc,setActiveDoc] = useState(null);
+ useEffect(() => {
+   if (!embed || window.parent === window) return;
+   const targetOrigin = window.location.ancestorOrigins?.[0] || '*';
+   const sendHeight = () => {
+     const height = Math.ceil(Math.max(document.documentElement.scrollHeight, document.body.scrollHeight));
+     window.parent.postMessage({type:'KRZYSZTOF_CV_HEIGHT', height}, targetOrigin);
+   };
+   const observer = new ResizeObserver(sendHeight);
+   observer.observe(document.documentElement);
+   const appRoot = document.getElementById('root');
+   if (appRoot) observer.observe(appRoot);
+   window.addEventListener('load', sendHeight);
+   document.fonts?.ready.then(sendHeight);
+   requestAnimationFrame(sendHeight);
+   return () => {observer.disconnect();window.removeEventListener('load', sendHeight);};
+ }, []);
  useEffect(()=>{if(activeDoc===null)return;const onKey=e=>{if(e.key==='Escape')setActiveDoc(null);if(e.key==='ArrowRight')setActiveDoc(i=>(i+1)%courseDocs.length);if(e.key==='ArrowLeft')setActiveDoc(i=>(i+courseDocs.length-1)%courseDocs.length)};window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey)},[activeDoc]);
  const t=labels[lang], v=data.variants[selected], exp=data.experience[lang];
  const pdf=`${import.meta.env.BASE_URL}CV_Krzysztof_Broniszewski_${selected.toUpperCase()}_${lang.toUpperCase()}.pdf`;
